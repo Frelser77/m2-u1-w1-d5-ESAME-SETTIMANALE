@@ -5,57 +5,71 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
 {
     public class Contribuente
     {
-        // Proprietà della classe
-        public string Nome { get; set; }
-        public string Cognome { get; set; }
-        public DateTime DataNascita { get; set; }
-        public string CodiceFiscale { get; set; }
-        public char Sesso { get; set; }
-        public string ComuneResidenza { get; set; }
-        public double RedditoAnnuale { get; set; }
+        // Proprietà private della classe
+        private string nome;
+        private string cognome;
+        private DateTime dataNascita;
+        private string codiceFiscale;
+        private char sesso;
+        private string comuneResidenza;
+        private double redditoAnnuale;
 
         // Costruttori della classe
         public Contribuente() { }
+
         public Contribuente(string nome, string cognome, DateTime dataNascita, string codiceFiscale,
-                                          char sesso, string comuneResidenza, double redditoAnnuale)
+                            char sesso, string comuneResidenza, double redditoAnnuale)
         {
-            Nome = nome;
-            Cognome = cognome;
-            DataNascita = dataNascita;
-            CodiceFiscale = codiceFiscale;
-            Sesso = sesso;
-            ComuneResidenza = comuneResidenza;
-            RedditoAnnuale = redditoAnnuale;
+            this.nome = nome;
+            this.cognome = cognome;
+            this.dataNascita = dataNascita;
+            this.codiceFiscale = codiceFiscale;
+            this.sesso = sesso;
+            this.comuneResidenza = comuneResidenza;
+            this.redditoAnnuale = redditoAnnuale;
         }
 
-        // Metodi comuni per settare le proprietà della classe Contribuente
-        public void SetNome(string nome)
+        // Metodi getter e setter per ogni proprietà
+        public string Nome
         {
-            Nome = nome;
+            get { return nome; }
+            set { nome = value; }
         }
-        public void SetCognome(string cognome)
+
+        public string Cognome
         {
-            Cognome = cognome;
+            get { return cognome; }
+            set { cognome = value; }
         }
-        public void SetDataNascita(DateTime dataNascita)
+
+        public DateTime DataNascita
         {
-            DataNascita = dataNascita;
+            get { return dataNascita; }
+            set { dataNascita = value; }
         }
-        public void SetCodiceFiscale(string codiceFiscale)
+
+        public string CodiceFiscale
         {
-            CodiceFiscale = codiceFiscale;
+            get { return codiceFiscale; }
+            set { codiceFiscale = value; }
         }
-        public void SetSesso(char sesso)
+
+        public char Sesso
         {
-            Sesso = sesso;
+            get { return sesso; }
+            set { sesso = value; }
         }
-        public void SetComuneResidenza(string comuneResidenza)
+
+        public string ComuneResidenza
         {
-            ComuneResidenza = comuneResidenza;
+            get { return comuneResidenza; }
+            set { comuneResidenza = value; }
         }
-        public void SetRedditoAnnuale(double redditoAnnuale)
+
+        public double RedditoAnnuale
         {
-            RedditoAnnuale = redditoAnnuale;
+            get { return redditoAnnuale; }
+            set { redditoAnnuale = value; }
         }
 
         // Metodo per calcolare l'imposta in base al reddito annuale
@@ -210,13 +224,13 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
         //metodo per raccogliere tutti i dati utente tramite i metodi sopra e settare le proprietà della classe Contribuente
         public void DataSet()
         {
-            SetNome(RichiediStringaNonVuota("Inserisci il tuo nome: "));
-            SetCognome(RichiediStringaNonVuota("Inserisci il tuo cognome: "));
-            SetDataNascita(RichiediDataNascita());
-            SetCodiceFiscale(RichiediCodiceFiscale());
-            SetSesso(RichiediSesso());
-            SetComuneResidenza(RichiediStringaNonVuota("Inserisci il tuo comune di residenza: "));
-            SetRedditoAnnuale(RichiediRedditoAnnuale());
+            this.Nome = (RichiediStringaNonVuota("Inserisci il tuo nome: "));
+            this.Cognome = (RichiediStringaNonVuota("Inserisci il tuo cognome: "));
+            this.DataNascita = (RichiediDataNascita());
+            this.CodiceFiscale = (RichiediCodiceFiscale());
+            this.Sesso = (RichiediSesso());
+            this.ComuneResidenza = (RichiediStringaNonVuota("Inserisci il tuo comune di residenza: "));
+            this.RedditoAnnuale = (RichiediRedditoAnnuale());
             Console.Clear();
         }
     }

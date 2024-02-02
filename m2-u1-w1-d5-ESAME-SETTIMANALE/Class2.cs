@@ -15,7 +15,8 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
             do
             {
                 Console.Clear();
-                Console.WriteLine("Si desidera continuare con il calcolo dell'imposta? (y/n)");
+                Console.WriteLine("* ================================================== *");
+                Console.WriteLine("* Si desidera continuare con il calcolo dell'imposta? (y/n)");
                 resp = Console.ReadLine().ToLower();
                 if (resp == "y")
                 {
@@ -64,6 +65,8 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Grazie e Arrivederci!");
                     Console.ResetColor();
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Premi un tasto per uscire . . .");
                     Console.ReadKey();
                     break;
                 }
