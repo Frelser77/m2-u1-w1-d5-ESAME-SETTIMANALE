@@ -224,13 +224,13 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
         //metodo per raccogliere tutti i dati utente tramite i metodi sopra e settare le proprietà della classe Contribuente
         public void DataSet()
         {
-            this.Nome = (RichiediStringaNonVuota("Inserisci il tuo nome: "));
-            this.Cognome = (RichiediStringaNonVuota("Inserisci il tuo cognome: "));
-            this.DataNascita = (RichiediDataNascita());
-            this.CodiceFiscale = (RichiediCodiceFiscale());
-            this.Sesso = (RichiediSesso());
-            this.ComuneResidenza = (RichiediStringaNonVuota("Inserisci il tuo comune di residenza: "));
-            this.RedditoAnnuale = (RichiediRedditoAnnuale());
+            Nome = (RichiediStringaNonVuota("Inserisci il tuo nome: "));
+            Cognome = (RichiediStringaNonVuota("Inserisci il tuo cognome: "));
+            DataNascita = (RichiediDataNascita());
+            CodiceFiscale = (RichiediCodiceFiscale());
+            Sesso = (RichiediSesso());
+            ComuneResidenza = (RichiediStringaNonVuota("Inserisci il tuo comune di residenza: "));
+            RedditoAnnuale = (RichiediRedditoAnnuale());
             Console.Clear();
         }
     }
