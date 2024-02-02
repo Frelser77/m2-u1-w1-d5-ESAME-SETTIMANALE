@@ -25,8 +25,10 @@ namespace m2_u1_w1_d5_ESAME_SETTIMANALE
                     string loadingMessage = "Calcolo dell'imposta in corso. . .";
                     foreach (char c in loadingMessage)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write(c);
                         Thread.Sleep(80);
+                        Console.ResetColor();
                     }
                     Console.Clear();
                     Console.WriteLine("==================================================");
